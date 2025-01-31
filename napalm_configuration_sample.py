@@ -35,7 +35,8 @@ def push_ios_config(hostname, username, password, config_commands):
 
 def main():
     hosts = [
-        {'hostname': '192.168.1.2', 'username': 'admin', 'password': 'password123'}
+        {'hostname': '192.168.1.2', 'username': 'admin', 'password': 'password123'},
+        {'hostname': '192.168.1.3', 'username': 'admin', 'password': 'password123'}
     ]
     
     config_commands = [
