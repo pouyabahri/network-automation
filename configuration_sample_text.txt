@@ -1,0 +1,58 @@
+conf t
+hostname SW-CORE-1
+
+spanning-tree vlan 10 root primary
+spanning-tree vlan 20 root primary
+
+vlan 10
+exit
+
+vlan 20
+exit
+
+vlan 100
+exit
+
+track 10 int gi0/1 line-protocol
+track 20 int gi0/1 line-protocol
+
+int vlan 10
+ no shut
+ ip address 192.168.10.2 255.255.255.0
+ standby 10 ip 192.168.10.1
+ standby 10 priority 110
+ standby 10 preempt
+ standby 10 track 10 decrement 20
+ standby 10 authentication 123
+exit
+
+int vlan 20
+ no shut
+ ip address 172.16.20.2 255.255.255.0
+ standby 20 ip 172.16.20.1
+ standby 20 priority 110
+ standby 20 preempt
+ standby 20 track 20 decrement 20
+ standby 20 authentication 123
+exit
+
+int vlan 100
+ no shut
+ ip address 172.16.110.242 255.255.255.0
+exit
+
+ip routing
+
+ip default-gateway 172.16.110.241
+
+int gi0/0
+ no shut
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+exit
+
+int gi0/1
+ no shut
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+exit
