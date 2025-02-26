@@ -14,7 +14,7 @@ This project focuses on automating network configuration, management, and monito
 
 ### v1.2
 - New: Added backup capability.
-```
+```python
 def create_backup_log(hosts, commands):
     """Create a backup log file in the Downloads folder."""
     downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
