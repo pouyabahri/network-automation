@@ -11,26 +11,6 @@ This project aims to streamline network management tasks by utilizing NAPALM and
 
 ## Version History
 
-### v1.2 (Latest)
-- New: Added backup capability.
-```python
-def create_backup_log(hosts, commands):
-    """Create a backup log file in the Downloads folder."""
-    downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
-    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    backup_filename = f"config_backup_{timestamp}.txt"
-    backup_filepath = os.path.join(downloads_path, backup_filename)
-    
-    try:
-        with open(backup_filepath, "w") as backup_file:
-            for host in hosts:
-                backup_file.write(f"Device IP: {host['hostname']}\n")
-                backup_file.write("Commands Executed:\n")
-                backup_file.write("\n".join(commands) + "\n\n")
-        print(f"📂 Backup saved: {backup_filepath}")
-    except Exception as e:
-        print(f"❌ Error saving backup: {e}")
-```
 ### v1.1
 - New: Added ping before establishing SSH session.
 ```python
