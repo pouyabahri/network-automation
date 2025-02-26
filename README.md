@@ -1,6 +1,7 @@
 # Network Automation using Python and Ansible
+This GitHub Repo focuses on using [Ansible](https://www.redhat.com/en/technologies/management/ansible/network-automation?sc_cid=7015Y000003t7aWQAQ) and [NAPALM](https://github.com/napalm-automation/napalm) for automating network management on Cisco IOS devices.
 
-This project focuses on automating network configuration, management, and monitoring tasks using Ansible and Python. It simplifies repetitive network operations, enhances consistency, and reduces human errors.
+This project aims to streamline network management tasks by utilizing NAPALM and Ansible for network automation. NAPALM is a Python library that enables consistent interaction with network devices, regardless of vendor. Ansible, an agentless automation tool, simplifies configuration management and orchestration. Together, these technologies form a powerful solution for automating network operations.
 
 ## Prerequisites
 
