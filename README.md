@@ -2,7 +2,7 @@
 
 ### Overview
 
-This project focuses on automating network configuration, management, and monitoring tasks using Ansible and Python. It simplifies repetitive network operations, enhances consistency, and reduces manual errors.
+This project focuses on automating network configuration, management, and monitoring tasks using Ansible and Python. It simplifies repetitive network operations, enhances consistency, and reduces human errors.
 
 ### Prerequisites
 
