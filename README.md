@@ -5,8 +5,19 @@ This project aims to streamline network management tasks by utilizing NAPALM for
 
 ## Version History
 
-### v1.1 (Latest)
+### v1.2 (Latest)
+- New: Added specific error handling for SSH connection failures (e.g., authentication issues, timeouts).
+
+```python
+    except napalm.base.exceptions.ConnectionException as e:
+        print(f'❌ SSH Connection error with {hostname}: {e}')
+    except Exception as e:
+        print(f'❌ Error configuring {hostname}: {e}')
+```
+
+### v1.1
 - New: Added ping before establishing SSH session.
+- Improved user experience.
 
 ```python
 import subprocess
