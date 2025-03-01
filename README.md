@@ -9,6 +9,8 @@ This project aims to streamline network management tasks by utilizing NAPALM for
 - New: Added ping before establishing SSH session.
 
 ```python
+import subprocess
+
 def ping_host(hostname):
     """Ping a host to check if it is reachable."""
     try:
