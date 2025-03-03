@@ -3,6 +3,11 @@ This GitHub Repo focuses on using [NAPALM](https://github.com/napalm-automation/
 
 This project aims to streamline network management tasks by utilizing NAPALM for network automation. NAPALM is a Python library that allows consistent interaction with network devices, regardless of vendor which simplifies configuration management and orchestration. It is a powerful solution for automating network operations.
 
+## Table of Contents
+- [Version History](#version-history)
+- [References](#references)
+- [Want to Contribute?](#want-to-contribute?)
+
 ## Version History
 
 ### v1.3 (Latest)
@@ -75,3 +80,8 @@ for host in hosts:
 ## References
 
 - [ansible-napalm-samples](https://github.com/network-automation/ansible-napalm-samples)
+
+## Want to Contribute?
+We love and appreciate contributions of all kinds! Whether it's fixing bugs, adding features, or improving documentation. Your help makes a difference.
+
+Have questions? Contact me at [pouya.bahri@yahoo.com].
