@@ -5,7 +5,25 @@ This project aims to streamline network management tasks by utilizing NAPALM for
 
 ## Version History
 
-### v1.2 (Latest)
+### v1.3 (Latest)
+- New: Added specific error handling for Ping failures (e.g., "Request Timed Out", "Destination Host Unreachable").
+
+```python
+if "request timed out" in output:
+            return False, "Request Timed Out"
+        elif "destination host unreachable" in output:
+            return False, "Destination Host Unreachable"
+        elif result.returncode == 0:
+            return True, "Host is Reachable"
+        else:
+            return False, "Unknown Error"
+    except subprocess.TimeoutExpired:
+        return False, "Ping Command Timed Out"
+    except Exception as e:
+        return False, f"Error: {str(e)}"
+```
+
+### v1.2
 - New: Added specific error handling for SSH connection failures (e.g., authentication issues, timeouts).
 
 ```python
@@ -17,7 +35,7 @@ This project aims to streamline network management tasks by utilizing NAPALM for
 
 ### v1.1
 - New: Added ping before establishing SSH session.
-- Improved user experience.
+- Improved console output.
 
 ```python
 import subprocess
