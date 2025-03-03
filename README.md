@@ -6,7 +6,7 @@ This project aims to streamline network management tasks by utilizing NAPALM for
 ## Table of Contents
 - [Version History](#version-history)
 - [References](#references)
-- [Want to Contribute?](#want-to-contribute?)
+- [Want to Contribute?](#want-to-contribute)
 
 ## Version History
 
