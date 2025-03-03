@@ -22,6 +22,11 @@ if "request timed out" in output:
     except Exception as e:
         return False, f"Error: {str(e)}"
 ```
+Output:
+```
+🔎 Pinging 203.0.0.1...
+❌ 203.0.0.1 is unreachable. Reason: Request Timed Out
+```
 
 ### v1.2
 - New: Added specific error handling for SSH connection failures (e.g., authentication issues, timeouts).
@@ -31,6 +36,13 @@ if "request timed out" in output:
         print(f'❌ SSH Connection error with {hostname}: {e}')
     except Exception as e:
         print(f'❌ Error configuring {hostname}: {e}')
+```
+Output:
+```
+🔎 Pinging 203.0.0.1...
+✅ 203.0.0.1 is reachable. Proceeding with configuration...
+🔌 Connecting to 203.0.0.1 via SSH...
+❌ SSH Connection error with 203.0.0.1: Authentication failed.
 ```
 
 ### v1.1
