@@ -6,7 +6,7 @@ This project aims to streamline network management tasks by utilizing NAPALM for
 ## Version History
 
 ### v1.3 (Latest)
-- New: Added specific error handling for Ping failures (e.g., "Request Timed Out", "Destination Host Unreachable").
+- New: Added specific error handling for ping failures (e.g., "Request Timed Out", "Destination Host Unreachable").
 
 ```python
 if "request timed out" in output:
@@ -25,7 +25,7 @@ if "request timed out" in output:
 Output:
 ```
 🔎 Pinging 203.0.0.1...
-❌ 203.0.0.1 is unreachable. Reason: Request Timed Out
+❌ 203.0.0.1 is unreachable. Reason: Request Timed Out.
 ```
 
 ### v1.2
